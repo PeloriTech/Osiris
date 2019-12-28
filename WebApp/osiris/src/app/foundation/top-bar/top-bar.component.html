@@ -1,0 +1,27 @@
+<mat-toolbar style="background-color:#FFFFFF">
+  <div fxHide.gt-xs>
+  </div>
+  <div>
+    <a class="navbar-brand" [routerLink]="['/']">
+      <img src="assets/pelori.png" width="80px" style="padding-top:10px;"/>
+    </a>
+  </div>
+  <button class="menu-button" mat-button [matMenuTriggerFor]="analyzeMenu">ANALYZE</button>
+  <mat-menu #analyzeMenu="matMenu">
+    <button mat-menu-item [routerLink]="['/pipes/manager']">Pipeline</button>
+    <button mat-menu-item [routerLink]="['/dataset/manager']">Dataset</button>
+  </mat-menu>
+
+  <button style="padding-top:5px;" mat-button [matMenuTriggerFor]="reportMenu">REPORT</button>
+  <mat-menu #reportMenu="matMenu">
+    <button mat-menu-item [routerLink]="['/report/map']">Map</button>
+  </mat-menu>
+
+  <span class="example-spacer"></span>
+  <button mat-icon-button [routerLink]="['/settings']">
+    <mat-icon>settings</mat-icon>
+  </button>
+  <button mat-icon-button (click)="logout()">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>

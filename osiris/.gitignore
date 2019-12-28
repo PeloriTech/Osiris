@@ -1,0 +1,12 @@
+venv/
+.idea
+*.pyc
+*.env
+*.sqlite3
+
+.coverage
+htmlcov/
+
+/data/
+cfg/
+weights/

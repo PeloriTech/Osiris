@@ -1,2 +1,3 @@
 # Osiris
-Scalable, real-time video streaming.
+
+Osiris is a platform to make edge AI-processing of videostreams accessible. Manage models, pipelines, and insights faster and more effectively.

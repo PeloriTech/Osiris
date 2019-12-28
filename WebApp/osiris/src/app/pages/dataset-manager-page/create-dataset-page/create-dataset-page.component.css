@@ -1,0 +1,33 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.create-container{
+    width: 50%;
+    margin-top: 10%;
+    margin-left: 25%
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+table {
+    margin-top: 20px;
+    width: 100%;
+}
+  
+.dataset-card {
+    margin-bottom: 10px;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}

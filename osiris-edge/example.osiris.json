@@ -1,0 +1,41 @@
+{
+  "name": "Osiris",
+  "version": "0.0.1",
+  "cameras": [
+    {
+      "type": "onvif",
+      "ip": "192.168.1.10",
+      "status": "up",
+      "interface": "enxb88d1253d169",
+      "endpoint": "/stream0",
+      "user": "admin",
+      "password": "password"
+    }
+  ],
+  "models": [
+    {
+      "name": "Darknet",
+      "version": "3.0",
+      "data": [
+        {
+          "name":  "coco.data",
+          "url": "https://raw.githubusercontent.com/pjreddie/darknet/master/cfg/coco.data"
+        },
+        {
+          "name":  "yolov3.cfg",
+          "url": "https://raw.githubusercontent.com/pjreddie/darknet/master/cfg/yolov3.cfg"
+        },
+        {
+          "name":  "coco.names",
+          "url": "https://raw.githubusercontent.com/pjreddie/darknet/master/data/coco.names"
+        }
+      ]
+    }
+  ],
+  "pipelines": [
+    {
+      "camera_ip": "192.168.1.10",
+      "model_name": "Darknet"
+    }
+  ]
+}

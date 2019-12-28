@@ -1,0 +1,16 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+click = "*"
+numpy = "*"
+netifaces = "*"
+wsdiscovery = "*"
+python-nmap = "*"
+
+[requires]
+python_version = "3.6"

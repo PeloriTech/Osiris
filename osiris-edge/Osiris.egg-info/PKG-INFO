@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: Osiris
+Version: 0.0.1
+Summary: A tool for managing AI systems
+Home-page: https://gitlab.com/peloritech/osiris
+Author: Pelori
+Author-email: samcrane8@gmail.com
+License: UNKNOWN
+Description: # Osiris
+        
+        The Osiris Library
+        
+        ## Goals
+        
+        The goals of Osiris is to automate the following:
+        
+        - scanning for video streams
+        
+        - model deployment
+        
+        - applying machine learning models to streams
+        
+        - outputting annotated feeds + insights
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

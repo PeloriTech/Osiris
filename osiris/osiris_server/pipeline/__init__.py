@@ -1,0 +1,1 @@
+from osiris_server.pipeline.PipelineModel import Pipeline

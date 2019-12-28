@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  tensorflow-serving:
+    image: 'tensorflow/serving:latest-gpu'
+    command: --model_config_file /models/models.config
+    environment:
+      - MODEL_NAME=resnet
+    ports:
+      - '8500:8500'
+      - '8501:8501'
+    volumes:
+      - '/var/lib/osiris/tensorflow-serve/:/models/'
+      - '/var/lib/osiris/tensorflow-serve/models.config:/models/models.config'
+volumes:
+  tensorflow_serving_data:
+    driver: local

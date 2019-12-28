@@ -1,0 +1,4 @@
+numpy
+cython
+yolo34py-gpu
+
