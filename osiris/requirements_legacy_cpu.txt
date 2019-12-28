@@ -8,4 +8,4 @@ psutil
 matplotlib
 websockets
 Pillow
-tensorflow==1.5
+tensorflow==1.15.0
