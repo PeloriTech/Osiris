@@ -27,8 +27,12 @@ class PipelineViews:
         return HttpResponse(resp_json, content_type="application/json", status=status)
 
     @staticmethod
-    def get_available_pipelines(request):
-        pass
+    @api_view(['GET'])
+    def get_publishers(request):
+        con_resp, resp_dict = PipelineController.get_publishers()
+        resp_json = json.dumps(resp_dict)
+        status = ControllerResponse.controller_response_to_http_status(con_resp)
+        return HttpResponse(resp_json, content_type="application/json", status=status)
 
     @staticmethod
     def create_new_pipeline(request):

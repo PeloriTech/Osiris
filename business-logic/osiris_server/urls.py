@@ -18,6 +18,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('user/', include('osiris_server.user.UserUrls')),
     path('pipeline/', include('osiris_server.pipeline.PipelineUrls'))
 ]

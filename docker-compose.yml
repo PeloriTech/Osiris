@@ -17,6 +17,8 @@ services:
       - SQL_HOST=db
       - POSTGRES_USER=postgres
       - POSTGRES_PASS=postgres
+      - WOWZA_HOST=$WOWZA_HOST
+      - TENSORFLOW_SERVE_URL=$TENSORFLOW_SERVE_URL
     volumes:
       - .:/usr/src/app
     ports:

@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from libs.ControllerResponse import ControllerResponse
 from osiris_server.pipeline.PipelineModel import Pipeline
 from osiris_server.pipeline.PipelineDAO import PipelineDAO
+from osiris_server.gateway.WowzaGateway import WowzaGateway
 
 from pipeline_manager.PipelineManager import PipelineManager
 
@@ -29,9 +30,8 @@ class PipelineController:
         return ControllerResponse.SUCCESS, response_dict
 
     @staticmethod
-    def get_available_pipeline_templates():
-        pass
-
+    def get_publishers() -> (ControllerResponse, dict):
+        return ControllerResponse.SUCCESS, WowzaGateway.get_publishers()
 
     @staticmethod
     def start(pipeline_id: str):

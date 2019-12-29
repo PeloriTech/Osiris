@@ -131,5 +131,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-TENSORFLOW_SERVE_URL = os.environ.get('TENSORFLOW_SERVE_URL', 'http://localhost:8501')
+# Tensorflow Serve
 
+TENSORFLOW_SERVE_URL = os.environ.get('TENSORFLOW_SERVE_URL')
+
+# Wowza Server
+
+WOWZA_HOST = os.environ.get('WOWZA_HOST')
