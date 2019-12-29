@@ -1,0 +1,45 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:latest
+    environment:
+      - POSTGRES_PASS=postgres
+      - POSTGRES_USER=postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+  business-logic:
+    build:
+      context: business-logic
+      dockerfile: Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000 # gunicorn survey.wsgi:application --bind 0.0.0.0:8000
+    environment: 
+      - SQL_HOST=db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASS=postgres
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 8000:8000
+    expose:
+      - 8000
+    depends_on:
+      - db
+  web:
+    build:
+      context: webapp
+      dockerfile: Dockerfile
+    command: yarn serve
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8080
+      - CHOKIDAR_USEPOLLING=true
+    volumes:
+      - .:/app
+    ports:
+      - 8080:8080
+    expose:
+      - 8080
+
+volumes:
+  postgres_data:
